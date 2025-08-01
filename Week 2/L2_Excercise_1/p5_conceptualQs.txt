@@ -1,0 +1,63 @@
+1. What is the difference between float and double in C? 
+
+A float and double both variables that are numbers that include decimal points. 
+The difference is that float is rougly capped at 6-7 decimal points, whereas double 
+can store many more decimal points in the same variable. 
+
+2. What does the %c format specifier do in printf? 
+
+%c is used when you referencing a char (charcter) variable type when printing. An 
+example of this might be like when we made a mini-calculator in class in lesson 2 , 
+where were printing 2 integers x and y , and an operator which we consider as a char. 
+
+printf("%d %c %d",x,op_new,y);      In this line, op_new is the char that is being referenced by %c
+
+Any single key from the keyboard could be counted as a char , letters, symbols, even numbers.
+
+3. What is the output of printf("%d", false);? 
+
+At first, I thought that this would throw an error, so I set up the code and tried it.
+The reason I thought it would throw an error was because I thought these pointers like 
+%d require you to initialize a variable for them to work, and I thought maybe false would
+be treated like a variable. However, when I tried it ,the output was 0 . 
+
+So what I can learn from this is that it does not treat false as a variable after the comma ,
+and the pointer %d can directly point to a boolean without needing a variable. 
+
+The output is 0 because 0 represents false in binary.
+
+4. Can you declare and initialize a string in C like Python? Why or why not? 
+
+Most ceratainly no. Python is much simpler. In python , you do not have to declare the variable type,
+python will just assume the variable type for you when you declare it. In python declaring variables 
+is optional, not mandatory. So even though I could declare the type at initialization, I do not have to. In C you have to. 
+
+So while I could write python like this : 
+Message = "This is a message" 
+
+C would require me to write it like this : 
+char Message[] = "This is a message";
+
+or alternatively I could split initialization and declaration into 2 steps in C : 
+char Message[] ;
+Message = "This is a message" ;
+
+5. What is the purpose of using char message[] = "Hello"; instead of char 
+*message = "Hello";?
+
+I didn't want to look this up , but I did try it in VS code to see if they both work. 
+They both give you the same output "hello" when using printf , so my best educated 
+guess here is that using * in front of the variableName means that the length of the 
+string will match exactly what the length of the value is e.g. "hello" would have a 
+string length of 5 , and would be the equivalent of message[5] . 
+
+However when the brackets [] are empty , I think they are the same, its just that the
+brackets [] allow you to specify an exact length of the string, whereas using * in front 
+does not allow you to specify length.
+
+After having looked it up, the difference is actually that *char stores this value in 
+read-only memory, meaning that it cannot be modified, using char[] stores it in the 
+stack memory if declared locally, allowing it to be modified later by methods like 
+indexing such as :
+message[] = "hello";
+message[0] = "H";

@@ -1,0 +1,25 @@
+-------The Snippet of Code--------------
+
+#include <stdio.h> 
+#include <stdbool.h> 
+ 
+int main() { 
+    bool isPassed = true; 
+    printf("Result: %d", isPassed); 
+    return 0; 
+} 
+ 
+
+ What will be the output of the following code snippet? 
+
+-----------❓My Answer:-----------------
+
+The output from the snippet above , once compiled into an exe file, will be 1, since we specified that
+the variable type was an integer as per our pointer %d which stands for "digit"/integer
+
+The 1 here represents the value true. 
+
+If isPassed were equal to false, the output would be 0 
+
+In binary, 1 is true and 0 is false, thus when representing a boolean value in integers, 
+the output is always going to be 0 or 1 for false and true. 
