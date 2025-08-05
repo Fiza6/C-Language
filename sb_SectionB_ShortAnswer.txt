@@ -1,0 +1,23 @@
+�Q1. What is the difference between a function declaration and a 
+function definition in C? 
+ 
+
+
+�Q2. Why is comparing arrays directly with == invalid in C, and what is 
+the alternative? 
+ 
+In C, == only checks to see if the 2 compared values share the same memory location, 
+not if they are the same contents. A simple alternative would be to iterate through 
+each of the elements in the array and check if they match. 
+
+�Q3. Explain why 5 / 2 gives 2 in C but 2.5 in Python. 
+ 
+
+
+�Q4. How does passing by value in C affect functions that modify 
+variables? 
+
+
+
+�Q5. What would happen if a float is passed to a function expecting 
+an int? 
