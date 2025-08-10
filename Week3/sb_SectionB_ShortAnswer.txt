@@ -1,0 +1,43 @@
+�Q1. What is the difference between a function declaration and a 
+function definition in C? 
+ 
+Declaring a function means declaring what its return variable type should be. For example , 
+if I need to return an integer, I will declare my function with int function_name () {} 
+The definition of the function is adding the guts to our function. Its the important bits 
+of what the function will do in essense once called.
+
+
+�Q2. Why is comparing arrays directly with == invalid in C, and what is 
+the alternative? 
+ 
+In C, == only checks to see if the 2 compared values share the same memory location, 
+not if they are the same contents. A simple alternative would be to iterate through 
+each of the elements in the array and check if they match. 
+
+�Q3. Explain why 5 / 2 gives 2 in C but 2.5 in Python. 
+
+C requires very strict variable type declaration. Even if the result is a float, but the 
+2 items being divided are integers, the result will be a rounded down result to the closest 
+integer,  conversely if there are negative numbers , it will be rounded up . This is called "trunkating" 
+For Python , variable types are more maleable on the fly. If the result of 2 divisors would equal a float, 
+it becomes a float, and it is not trunkated.
+
+
+�Q4. How does passing by value in C affect functions that modify 
+variables? 
+
+So its important to pass data on into your functions for example list size or other data, 
+because the memory will decay. For example if you want to count items in a list, and you 
+send the list to be counted, it wont be accurate because whats being passed to the function 
+is not the full list, but rather the address of the first item in the list, so the sizeof() 
+will be innaccurate and less than if you count the size of the list outside of that function, 
+then pass the result of the counted size, instead of the list itself.
+
+
+�Q5. What would happen if a float is passed to a function expecting 
+an int? 
+
+The function would break as far as I know. Since Variable types are incredibly important in C. 
+While variable types can be changed after being declared through typecasting, if not explicitly
+specified, the function would throw an error about the type of variable being a different type 
+than expected. 
